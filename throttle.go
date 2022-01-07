@@ -7,8 +7,6 @@ import "sync"
 import "os"
 import "time"
 
-const SockAddr = "/tmp/echo.sock"
-
 func clientHandler(listenSide net.Conn, connectPath string, latency int) {
     log.Printf("Client connected, connecting to %s", connectPath)
     defer listenSide.Close()
